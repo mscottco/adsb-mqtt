@@ -223,7 +223,7 @@ function pollUpdate() {
 
 	  }))
       }
-      if (fr24JsonURL != "") {
+      if (fr24JsonURL) {
         promises.push(fetch(fr24JsonURL)
           .then(res => res.json())
 	  .then(frJson => {
@@ -246,7 +246,7 @@ function pollUpdate() {
             o['feeds']['flightradar24'] = fr
 	  }))
       }
-      if (pfJsonURL != "") {
+      if (pfJsonURL) {
         promises.push(fetch(pfJsonURL)
           .then(res => res.json())
 	  .then(pfJson => {
