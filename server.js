@@ -200,7 +200,7 @@ function pollUpdate() {
       lasttime = timestamp
       lastmessages = messages
       o['feeds'] = {}
-      if (faJsonURL != "") {
+      if (faJsonURL) {
         promises.push(fetch(faJsonURL)
           .then(res => res.json())
 	  .then(faJson => {
